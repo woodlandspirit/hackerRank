@@ -14,22 +14,22 @@ import sys
 #
 
 def timeConversion(s):
-    string_array = s.rsplit(":");
-    hour = string_array[0];
+    string_array = s.rsplit(":")
+    hour = string_array[0]
     if 'AM' in string_array[2]:
         if hour == '12':
-            military = '00';
+            military = '00'
         else:
-            military = str(hour);
+            military = str(hour)
     elif 'PM' in string_array[2]:
         if hour == '12':
-            military = hour;
+            military = hour
         else:
-            military = str(int(hour) + 12);
-    string_array[0] = military;
-    no_am_pm = string_array[2].strip('APM');
-    string_array[2] = no_am_pm;
-    no_am_pm = ':'.join(string_array);
+            military = str(int(hour) + 12)
+    string_array[0] = military
+    no_am_pm = string_array[2].strip('APM')
+    string_array[2] = no_am_pm
+    no_am_pm = ':'.join(string_array)
     return  no_am_pm
 
 if __name__ == '__main__':
