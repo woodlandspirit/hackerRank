@@ -18,7 +18,8 @@ def lonelyinteger(a):
     for value in dicc:
         occurrences = a.count(value)
         dicc.update({value: occurrences})
-    return list(dicc.keys())[list(dicc.values()).index(1)]
+    lonely_int_index = list(dicc.values()).index(1)
+    return list(dicc.keys())[lonely_int_index]
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
